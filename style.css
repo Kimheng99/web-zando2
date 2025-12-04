@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a,li,i{
+    cursor: pointer;
+    transition: 0.5s;
+}
+li:hover{
+    transform: scale(1.1);
+}
+i:hover{
+    transform: scale(1.1);
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    position: sticky;
+}
+.navbar .left-list{
+    padding: 0px 40px;
+}
+.navbar .left-list ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    
+}
+.navbar .left-list ul li{
+    list-style: none;
+}
+.navbar .left-list ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(80, 78, 78);
+    font-weight: 600;
+}
+.logo{
+    margin-left: 230px;
+}
+.logo img{
+    height: 44px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.icon .search{
+   display: flex;
+}
+.icon .search input{
+    padding: 16px ;
+    padding-left: 66px;
+    font-size: 24px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid rgb(171, 171, 171);
+    position: relative;
+    
+    
+}
+.search-icon{
+    position: absolute;
+    margin: 10px 24px;
+}
+.search-icon i{
+    font-size: 34px;
+    color: rgb(146, 141, 141);
+}
+.icon ul {
+    display: flex;
+    flex-direction: row;
+    gap: 26px;
+}
+.icon ul li i{
+    font-size: 40px;
+    color: rgb(44, 45, 45);
+}
+.login-container{
+    margin-right: 30px;
+}
+.login-container ul{
+    display: flex;
+    gap: 30px;
+}
+.login-container ul li a{
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(79, 79, 80);
+}
+
+.home-container {
+    background: url('/Assets/cover.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+
+}
+.home-container .button-container{
+    width: 650px;
+    height: 140px;
+    /* background-color: aliceblue; */
+    position: absolute;
+    bottom: 4%;
+    left: 34.5%;
+    text-align: center;
+
+    
+}
+/* From Uiverse.io by nikk7007 */ 
+.slice {
+  --c1: #202020;
+  --c2: #edf4f5;
+  --size-letter: 32px;
+  padding: 0.7em 1.4em;
+  font-size: var(--size-letter);
+
+  background-color: transparent;
+  border: calc(var(--size-letter) / 6) solid var(--c2);
+  border-radius: 0.2em;
+  cursor: pointer;
+
+  overflow: hidden;
+  position: relative;
+  transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+  margin-top: 40px;
+  margin-right: 20px;
+  box-shadow: 5px 10px 10px rgba(224, 220, 220, 0.486);
+
+  
+
+  & > .text {
+    font-weight: 700;
+    color: var(--c2);
+    position: relative;
+    z-index: 1;
+    transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+  }
+}
+
+.slice::after {
+  content: "";
+
+  width: 0;
+  height: calc(300% + 1em);
+
+  position: absolute;
+  translate: -50% -50%;
+  inset: 50%;
+  rotate: 30deg;
+
+  background-color: var(--c2);
+  transition: 1000ms cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.slice:hover {
+  & > .text {
+    color: var(--c1);
+  }
+  &::after {
+    width: calc(120% + 1em);
+  }
+}
+
+.slice:active {
+  scale: 0.98;
+  filter: brightness(0.9);
+}
+.brand-container{
+    height: 280px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    
+    
+}
+.box-img{
+    width: 13%;
+    margin-left: 0px;
+}
+.box-img img{
+    height: 100%;
+}
+.slide{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: aqua;
+    
+}
+.slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: heng 12s infinite;
+
+}
+.slide img:nth-child(1){
+    animation-delay: 0s;
+}
+.slide img:nth-child(2){
+    animation-delay: 3s;
+}
+.slide img:nth-child(3){
+    animation-delay: 6s;
+}
+.slide img:nth-child(4){
+    animation-delay: 9s;
+}
+
+@keyframes heng {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    33%{
+        opacity: 1;
+    }
+    43%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
